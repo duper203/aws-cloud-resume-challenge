@@ -22,3 +22,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'ap-northeast-2'
         SOURCE_DIR: 'website'
+        LAMBDA_VIEWS_URL: ${{ secrets.LAMBDA_VIEWS_URL }}
