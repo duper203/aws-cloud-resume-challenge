@@ -57,7 +57,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const counter = document.querySelector(".counter-number"); //html 파일의 클래스와 이름이 같게
 async function updateCounter() {
     let response = await fetch(
-        process.env.LAMBDA_VIEWS_URL // Secrets로부터 URL을 가져옴
+        `${secrets.LAMBDA_VIEWS_URL}` // Secrets로부터 URL을 가져옴
+        // "https://65a7xnqtewa5uvlw7eil6mzfzy0mytzt.lambda-url.ap-northeast-2.on.aws/"
     );
     let data = await response.json();
     counter.innerHTML = `👀 Views: ${data}`;
